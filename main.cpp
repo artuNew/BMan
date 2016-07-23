@@ -1,25 +1,12 @@
-// mutex example
-#include <iostream>       // std::cout
-#include <thread>         // std::thread
-#include <mutex>          // std::mutex
+#include <QApplication>
 
-std::mutex mtx;           // mutex for critical section
+#include "mainwindow.h"
 
-void print_block (int n, char c) {
-    // critical section (exclusive access to std::cout signaled by locking mtx):
-    //mtx.lock();
-    for (int i=0; i<n; ++i) { std::cout << c; }
-    std::cout << '\n';
-    //mtx.unlock();
-}
-
-int main ()
+int main(int argc, char *argv[])
 {
-    std::thread th1 (print_block,50,'-');
-    std::thread th2 (print_block,50,'+');
+    QApplication a(argc, argv);
+    MainWindow w;
+    w.show();
 
-    th1.join();
-    th2.join();
-
-    return 0;
+    return a.exec();
 }
