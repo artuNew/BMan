@@ -68,7 +68,7 @@ void MainWindow::render()
  */
 void MainWindow::keyPressEvent(QKeyEvent *e)
 {
-    mKeys.insert(static_cast<Qt::Key>(e->key());
+    mKeys.insert(static_cast<Qt::Key>(e->key()));
     mHero.handleKeyPress(mKeys);
 
     // TODO: AD: why is it stuttering here while pressing arrow and updating?
