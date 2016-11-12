@@ -32,13 +32,14 @@ signals:
 
 protected:
 
-    // TODO: AD figure out why this not working here
+    // TODO: AD figure out why this ["is"? - AD] not working here
     // but only in QMainWindow, keyboard key press event not received
     // here despite that it is QWidget class
 
     // methods
 //    virtual void keyPressEvent(QKeyEvent *e);
 
+    // Ty pisałeś te komentarze? Dlaczego po angielsku? Bo taki jest zwyczaj? - AD
 private:
     // data
     QColor mColor;

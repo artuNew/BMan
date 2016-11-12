@@ -72,6 +72,7 @@ void MainWindow::keyPressEvent(QKeyEvent *e)
     mHero.handleKeyPress(mKeys);
 
     // TODO: AD: why is it stuttering here while pressing arrow and updating?
+    // I don't know - AD
     this->update();
 }
 
@@ -92,7 +93,7 @@ void MainWindow::keyReleaseEvent(QKeyEvent *e)
  */
 void MainWindow::close()
 {
-    qDebug() << "Bye!";
+    qDebug() << "Bye!"; // Co to znaczy?
 
     // Exit with return code 0 (success)
     QApplication::quit();
